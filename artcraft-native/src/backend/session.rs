@@ -12,7 +12,7 @@ use log::{info, warn};
 use serde::{Deserialize, Serialize};
 
 /// The Tauri app's identifier: its cookie jar lives in `<cache dir>/<identifier>/.cookies`.
-const TAURI_APP_IDENTIFIER: &str = "ai.artcraft.app";
+const TAURI_APP_IDENTIFIER: &str = "au.com.notrealsmart.craft";
 const TAURI_COOKIES_FILENAME: &str = ".cookies";
 const CREDENTIALS_FILENAME: &str = "native_session.json";
 

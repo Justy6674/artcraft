@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0-rc",
-  "productName": "ArtCraft",
+  "productName": "NRS Craft",
   "version": "0.42.0",
-  "identifier": "ai.artcraft.app",
+  "identifier": "au.com.notrealsmart.craft",
   "build": {
     "frontendDist": "../../../frontend/apps/artcraft/dist",
     "devUrl": "http://localhost:5173",
@@ -15,7 +15,7 @@
     "security": {
       "assetProtocol": {
         "enable": true,
-        "scope": ["$APPDATA/**", "$APPLOCALDATA/**", "$APPCACHE/**", "$HOME/Artcraft/**", "$DOWNLOAD/**", "$DESKTOP/**", "$DOCUMENT/**", "$PICTURE/**", "$VIDEO/**", "$AUDIO/**", "$TEMP/**"]
+        "scope": ["$APPDATA/**", "$APPLOCALDATA/**", "$APPCACHE/**", "$HOME/NRS-Craft/**", "$DOWNLOAD/**", "$DESKTOP/**", "$DOCUMENT/**", "$PICTURE/**", "$VIDEO/**", "$AUDIO/**", "$TEMP/**"]
       },
       "csp": {
         "default-src": [

@@ -56,3 +56,8 @@ The files listed above under "Material not covered by the license above" (Ninten
 images and likenesses, the gray and night skybox packs, the Lumine MMD motion, and the Mixamo render GIFs)
 have been removed from this fork. Code that referenced them now falls back to silence, an empty list, the
 default skybox, a placeholder thumbnail, or loading MMD models without the idle motion.
+
+This fork is built as "NRS Craft" (bundle identifier au.com.notrealsmart.craft, data folder ~/NRS-Craft)
+because the ArtCraft name, wordmark and logos are trademarks of the ArtCraft Team and are not covered by
+the licence. It is an unofficial fork of ArtCraft (https://github.com/storytold/artcraft), used under
+MIT OR Apache-2.0, and is not made or endorsed by the ArtCraft Team.

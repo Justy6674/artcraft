@@ -11,7 +11,9 @@ use anyhow::anyhow;
 use directories::UserDirs;
 use std::path::{Path, PathBuf};
 
-const DEFAULT_DATA_DIR : &str = "Artcraft";
+// NRS build: own data folder so this fork never shares settings, credentials or
+// downloads with an installed copy of the official ArtCraft app.
+const DEFAULT_DATA_DIR : &str = "NRS-Craft";
 
 /// Note: Tauri appends ".log" to the end of the filename.
 const LOG_FILE_NAME : &str = "artcraft_debug";

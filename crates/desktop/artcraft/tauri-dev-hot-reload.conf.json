@@ -12,7 +12,7 @@
     "security": {
       "assetProtocol": {
         "enable": true,
-        "scope": ["$APPDATA/**", "$APPLOCALDATA/**", "$APPCACHE/**", "$HOME/Artcraft/**", "$DOWNLOAD/**", "$DESKTOP/**", "$DOCUMENT/**", "$PICTURE/**", "$VIDEO/**", "$AUDIO/**", "$TEMP/**"]
+        "scope": ["$APPDATA/**", "$APPLOCALDATA/**", "$APPCACHE/**", "$HOME/NRS-Craft/**", "$DOWNLOAD/**", "$DESKTOP/**", "$DOCUMENT/**", "$PICTURE/**", "$VIDEO/**", "$AUDIO/**", "$TEMP/**"]
       },
       "csp": {
         "default-src": [
