@@ -1,4 +1,5 @@
 import { BoxIcon, CrosshairIcon, DropletIcon, FilmIcon, GlobeIcon, GroupIcon, ImageIcon, ImagesIcon, MusicIcon, PenToolIcon, PencilIcon, SparklesIcon, WandSparklesIcon } from "lucide-react";
+import { NRS_ENABLE_WATERMARK_REMOVERS } from "./nrsFlags";
 import type { LucideIcon } from "lucide-react";
 import { useMemo } from "react";
 import {
@@ -387,6 +388,12 @@ export const useVisibleApps = (): FullAppItem[] => {
         // Background Change is hidden in the desktop app for now.
         if (app.action === "BACKGROUND_CHANGE") return false;
         if (app.action === "STORYBOARD") return storyboardEnabled;
+        if (
+          !NRS_ENABLE_WATERMARK_REMOVERS &&
+          (app.id === "video-watermark-removal" ||
+            app.id === "image-watermark-removal")
+        )
+          return false;
         return true;
       }),
     [storyboardEnabled],

@@ -11,6 +11,7 @@
 // dependency on the 3D engine being present.
 
 import { lazy, Suspense, useEffect } from "react";
+import { NRS_ENABLE_WATERMARK_REMOVERS, NRS_FEATURE_OFF_MESSAGE } from "~/config/nrsFlags";
 import { useSignals } from "@preact/signals-react/runtime";
 
 import { TopBar } from "~/components";
@@ -287,13 +288,21 @@ const TabBody = ({ sceneToken }: { sceneToken?: string }) => {
     case "VIDEO_WATERMARK_REMOVAL":
       return (
         <div>
-          <VideoWatermarkRemover />
+          {NRS_ENABLE_WATERMARK_REMOVERS ? (
+            <VideoWatermarkRemover />
+          ) : (
+            <p className="p-8 text-sm opacity-80">{NRS_FEATURE_OFF_MESSAGE}</p>
+          )}
         </div>
       );
     case "IMAGE_WATERMARK_REMOVAL":
       return (
         <div>
-          <ImageWatermarkRemover />
+          {NRS_ENABLE_WATERMARK_REMOVERS ? (
+            <ImageWatermarkRemover />
+          ) : (
+            <p className="p-8 text-sm opacity-80">{NRS_FEATURE_OFF_MESSAGE}</p>
+          )}
         </div>
       );
     case "IMAGE_TO_3D_OBJECT":

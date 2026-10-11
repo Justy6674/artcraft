@@ -13,6 +13,10 @@ pub async fn worldlabs_open_login_command(
   worldlabs_bearer_bridge: State<'_, WorldlabsBearerBridge>,
   worldlabs_creds_manager: State<'_, WorldlabsCredentialManager>,
 ) -> Result<String, String> {
+  if !crate::core::utils::nrs_flags::consumer_logins_enabled() {
+    return Err(crate::core::utils::nrs_flags::CONSUMER_LOGINS_OFF_MESSAGE.to_string());
+  }
+
   info!("worldlabs_open_login_command called");
 
   do_open_login(&app, &app_data_root, &worldlabs_bearer_bridge, &worldlabs_creds_manager)

@@ -11,6 +11,10 @@ pub async fn open_sora_login_command(
   app_data_root: State<'_, AppDataRoot>,
   sora_creds_manager: State<'_, SoraCredentialManager>,
 ) -> Result<String, String> {
+  if !crate::core::utils::nrs_flags::consumer_logins_enabled() {
+    return Err(crate::core::utils::nrs_flags::CONSUMER_LOGINS_OFF_MESSAGE.to_string());
+  }
+
   info!("open_login_command called");
 
   do_open_login(&app, &app_data_root, &sora_creds_manager)
